@@ -1,0 +1,19 @@
+{
+  "name": "governance_dashboard",
+  "version": "0.0.1",
+  "scripts": {
+    "bundle": "browserify public/app.js > public/bundle.js",
+    "bundlelogin": "browserify public/assets/js/login.js > public/assets/js/bundlelogin.js",
+    "start": "http-server -c-1 -p 12345 public",
+    "dev": "npm run bundle && npm run start"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^16.2.0",
+    "http-server": "^0.11.1"
+  },
+  "dependencies": {
+    "stream-buffers": "^3.0.1",
+    "web3": "^1.0.0-beta.51"
+  }
+}
