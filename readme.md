@@ -6,16 +6,16 @@
 
 ## Main page
 
-![](https://imgur.com/gnoKE3r)
+![](https://i.ibb.co/CzVbYtr/Screenshot-2019-03-30-at-00-03-04.png)
 
 # ----------------------------
 
 ## Join the campaign
 
-![](https://imgur.com/5oPTCco)
+![](https://i.ibb.co/ZBSr97m/Screenshot-2019-03-30-at-00-03-13.png)
 
 # ----------------------------
 
 ## Information
 
-![](https://imgur.com/vS5oaBE)
+![](https://i.ibb.co/5nFV9cq/Screenshot-2019-03-30-at-00-03-24.png)
