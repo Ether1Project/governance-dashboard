@@ -1329,7 +1329,7 @@ hr {
     transform-style: preserve-3d;
     will-change: transform;
     border: 0;
-    background-color: rgba(32, 31, 43, 0.74); }
+    background-color: #190f13; }
     .sidebar .wrap {
       height: 100%;
       padding: 64px 0;
@@ -4108,8 +4108,8 @@ a.pswp__share--download:hover {
   margin: 0; }
 
 .pswp--css_animation .pswp__preloader__cut {
-  /* 
-			The idea of animating inner circle is based on Polymer ("material") loading indicator 
+  /*
+			The idea of animating inner circle is based on Polymer ("material") loading indicator
 			 by Keanu Lee https://blog.keanulee.com/2014/10/20/the-tale-of-three-spinners.html
 		*/
   position: relative;
