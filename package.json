@@ -2,7 +2,6 @@
   "name": "governance_dashboard",
   "version": "0.0.1",
   "scripts": {
-    "bundle": "browserify public/app.js > public/bundle.js",
     "bundlelogin": "browserify public/assets/js/login.js > public/assets/js/bundlelogin.js",
     "start": "http-server -c-1 -p 12345 public",
     "dev": "npm run bundle && npm run start"
