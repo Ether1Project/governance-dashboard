@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/default-css.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- modernizr css -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -353,6 +354,111 @@
                 </div>
             </div>
             <!-- page title area end -->
+            <!--JS for ETHO price-->
+            <script>
+            function updatePriceData()
+            {
+                $.getJSON('https://www.coincalculators.io/api.aspx?name=ether1&hashrate=38000000&power=175&poolfee=0&powercost=0.1', function(data) {
+                    var text = `${data.price_usd}`
+                    var text= "$" + Math.round(data.price_usd*100000)/100000 + " USD"
+
+                    $(".price").html(text);
+
+                    setTimeout(updatePriceData(), 100000);
+                });
+            }
+
+            setTimeout(updatePriceData(), 100000);
+        </script>
+        <!--END of JS for the price-->
+        <!--JS for BTC price-->
+        <script>
+        function updatePriceData()
+        {
+            $.getJSON('https://www.coincalculators.io/api.aspx?name=bitcoin&hashrate=76000000000000&power=4000&poolfee=0&powercost=0.1', function(data) {
+                var text = `${data.price_usd}`
+                var text= "$" + Math.round(data.price_usd) + " USD"
+
+                $(".price2").html(text);
+
+                setTimeout(updatePriceData(), 100000);
+            });
+        }
+
+        setTimeout(updatePriceData(), 100000);
+    </script>
+    <!--END of JS for the price-->
+    <!--JS for ETH price-->
+    <script>
+    function updatePriceData()
+    {
+        $.getJSON('https://www.coincalculators.io/api.aspx?name=ethereum&hashrate=76000000000000&power=4000&poolfee=0&powercost=0.1', function(data) {
+            var text = `${data.price_usd}`
+            var text= "$" + Math.round(data.price_usd) + " USD"
+
+            $(".price3").html(text);
+
+            setTimeout(updatePriceData(), 100000);
+        });
+    }
+
+    setTimeout(updatePriceData(), 100000);
+</script>
+<!--END of JS for the price-->
+<!--JS for the %-->
+<script>
+function updateDiff()
+{
+      $.getJSON('https://api.coingecko.com/api/v3/coins/ether-1?tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true', function(data) {
+
+          var text = `${data.market_data.price_change_percentage_24h}`
+          var text=Math.round(data.market_data.price_change_percentage_24h*100)/100 + "%"
+
+$(".etho").html(text);
+setTimeout(updateDiff(), 10000);
+
+      });
+    }
+
+    setTimeout(updateDiff(), 10000);
+      </script>
+      <!--END of JS for the %-->
+      <!--JS for the %-->
+      <script>
+      function updateDiff()
+      {
+            $.getJSON('https://api.coingecko.com/api/v3/coins/bitcoin?tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true', function(data) {
+
+                var text = `${data.market_data.price_change_percentage_24h}`
+                var text=Math.round(data.market_data.price_change_percentage_24h*100)/100 + "%"
+
+      $(".btc").html(text);
+      setTimeout(updateDiff(), 10000);
+
+            });
+          }
+
+          setTimeout(updateDiff(), 10000);
+            </script>
+            <!--END of JS for the %-->
+            <!--JS for the %-->
+            <script>
+            function updateDiff()
+            {
+                  $.getJSON('https://api.coingecko.com/api/v3/coins/ethereum?tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true', function(data) {
+
+                      var text = `${data.market_data.price_change_percentage_24h}`
+                      var text=Math.round(data.market_data.price_change_percentage_24h*100)/100 + "%"
+
+            $(".eth").html(text);
+            setTimeout(updateDiff(), 10000);
+
+                  });
+                }
+
+                setTimeout(updateDiff(), 10000);
+                  </script>
+                  <!--END of JS for the %-->
             <div class="main-content-inner">
                 <!-- sales report area start -->
                 <div class="sales-report-area mt-5 mb-5">
@@ -360,14 +466,14 @@
                         <div class="col-md-4">
                             <div class="single-report mb-xs-30">
                                 <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fa fa-btc"></i></div>
+                                    <div class="icon"><img src="assets/images/icon/icon2.png" alt="logo" style="height: 40px; width: 40px"></div>
                                     <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Bitcoin</h4>
+                                        <h4 class="header-title mb-0">Ether-1 Price</h4>
                                         <p>24 H</p>
                                     </div>
                                     <div class="d-flex justify-content-between pb-2">
-                                        <h2>$ 4567809,987</h2>
-                                        <span>- 45.87</span>
+                                        <h2 class="price">4567809,987</h2>
+                                        <span class="etho">45.87</span>
                                     </div>
                                 </div>
                                 <canvas id="coin_sales1" height="100"></canvas>
@@ -376,14 +482,14 @@
                         <div class="col-md-4">
                             <div class="single-report mb-xs-30">
                                 <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fa fa-btc"></i></div>
+                                    <div class="icon"><img src="assets/images/icon/btc.jpeg" alt="logo" style="height: 40px; width: 40px"></div>
                                     <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Bitcoin Dash</h4>
+                                        <h4 class="header-title mb-0">Bitcoin</h4>
                                         <p>24 H</p>
                                     </div>
                                     <div class="d-flex justify-content-between pb-2">
-                                        <h2>$ 4567809,987</h2>
-                                        <span>- 45.87</span>
+                                        <h2 class="price2">4567809,987</h2>
+                                        <span class="btc">45.87</span>
                                     </div>
                                 </div>
                                 <canvas id="coin_sales2" height="100"></canvas>
@@ -392,14 +498,14 @@
                         <div class="col-md-4">
                             <div class="single-report">
                                 <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fa fa-eur"></i></div>
+                                    <div class="icon"><img src="assets/images/icon/eth.png" alt="logo" style="height: 40px; width: 40px"></div>
                                     <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Euthorium</h4>
+                                        <h4 class="header-title mb-0">Ethereum</h4>
                                         <p>24 H</p>
                                     </div>
                                     <div class="d-flex justify-content-between pb-2">
-                                        <h2>$ 4567809,987</h2>
-                                        <span>- 45.87</span>
+                                        <h2 class="price3">4567809,987</h2>
+                                        <span class="eth">45.87</span>
                                     </div>
                                 </div>
                                 <canvas id="coin_sales3" height="100"></canvas>
@@ -414,10 +520,9 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <h4 class="header-title mb-0">Overview</h4>
+                                    <h4 class="header-title mb-0">Overview of your ETHO Backing</h4>
                                     <select class="custome-select border-0 pr-3">
                                         <option selected>Last 24 Hours</option>
-                                        <option value="0">01 July 2018</option>
                                     </select>
                                 </div>
                                 <div id="verview-shart"></div>
@@ -895,7 +1000,7 @@
     <script src="assets/js/metisMenu.min.js"></script>
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- start chart js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <!-- start highcharts js -->

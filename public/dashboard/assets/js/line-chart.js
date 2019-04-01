@@ -9,8 +9,8 @@ if ($('#coin_sales1').length) {
             labels: ["January", "February", "March", "April", "May", "June", "July", "January", "February", "March", "April", "May"],
             datasets: [{
                 label: "Sales",
-                backgroundColor: "rgba(117, 19, 246, 0.1)",
-                borderColor: '#0b76b6',
+                backgroundColor: "rgba(132, 0, 50, 0.1)",
+                borderColor: '#840032',
                 data: [18, 41, 86, 49, 20, 35, 20, 50, 49, 30, 45, 25],
             }]
         },
@@ -65,8 +65,8 @@ if ($('#coin_sales2').length) {
             labels: ["January", "February", "March", "April", "May", "June", "July", "January", "February", "March", "April", "May"],
             datasets: [{
                 label: "Sales",
-                backgroundColor: "rgba(240, 180, 26, 0.1)",
-                borderColor: '#F0B41A',
+                backgroundColor: "rgba(255, 102, 7, 0.1)",
+                borderColor: '#ff6607',
                 data: [18, 41, 86, 49, 20, 65, 64, 50, 49, 30, 45, 25],
             }]
         },
@@ -121,8 +121,8 @@ if ($('#coin_sales3').length) {
             labels: ["January", "February", "March", "April", "May", "June", "July", "January", "February", "March", "April", "May"],
             datasets: [{
                 label: "Sales",
-                backgroundColor: "rgba(247, 163, 58, 0.1)",
-                borderColor: '#fd9d24',
+                backgroundColor: "rgba(92, 107, 192, 0.1)",
+                borderColor: '#5c6bc0',
                 fill: true,
                 data: [18, 41, 50, 49, 20, 65, 50, 86, 20, 30, 45, 25],
             }]

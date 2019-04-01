@@ -816,7 +816,7 @@ ul.breadcrumbs {
 .single-report .icon {
     font-size: 32px;
     color: #fff;
-    background: var(--primary-color);
+    background: #000;
     height: 95px;
     width: 100px;
     text-align: right;
