@@ -84,7 +84,7 @@ window.AddNewUser = function(){
                 waitForReceipt(result, function (receipt) {
                     console.log("Transaction Has Been Mined: " + receipt);
                     console.log("User Account Found: " + web3.eth.defaultAccount);
-                    var formText = '<a href="uploads.html"><button type="enter" id="enter-button" class="btn btn-primary-enter">Enter</button></a><br><p class="m-b-0 fade-color-3"><small>User Address Found - Click Enter To Proceed</small></p>';
+                    var formText = '<a href="dashboard/index.html"><button type="enter" id="enter-button" class="btn btn-primary-enter">Enter</button></a><br><p class="m-b-0 fade-color-3"><small>User Address Found - Click Enter To Proceed</small></p>';
                     document.getElementById("ethoFSLogin").innerHTML = formText;
                 });
             }else{
