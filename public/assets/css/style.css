@@ -610,7 +610,7 @@ textarea.form-control {
   border-radius: 50%; }
 
 .btn-primary {
-  color: #7a1336;
+  color: #27b03e;
   border-color: rgba(122, 19, 54);
   background-color: rgba(32, 31, 43, 0.24);
   -webkit-transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -641,8 +641,8 @@ textarea.form-control {
     background-color: rgba(32, 31, 43, 0.24); }
 
 .btn-toggler {
-  border-color: rgba(122, 19, 54);
-  background-color: #201f2b; }
+  border-color: #03A9F4;
+  background-color: #03A9F4; }
   .btn-toggler:active, .btn-toggler:focus:not(:active) {
     background-color: #201f2b; }
 
