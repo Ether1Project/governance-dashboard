@@ -172,6 +172,10 @@ if ($('#coin_sales3').length) {
 if ($('#verview-shart').length) {
     var myConfig = {
         "type": "line",
+        backgroundColor:'black',
+        plotarea:{
+          backgroundColor:'black'
+},
 
         "scale-x": { //X-Axis
             "labels": ["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100"],
@@ -191,29 +195,29 @@ if ($('#verview-shart').length) {
         "plot": { "aspect": "spline" },
         "series": [{
                 "values": [20, 25, 30, 35, 45, 40, 40, 35, 25, 17, 40, 50],
-                "line-color": "#F0B41A",
+                "line-color": "#840032",
                 /* "dotted" | "dashed" */
                 "line-width": 5 /* in pixels */ ,
                 "marker": { /* Marker object */
-                    "background-color": "#D79D3B",
+                    "background-color": "#6b157c",
                     /* hexadecimal or RGB value */
                     "size": 5,
                     /* in pixels */
-                    "border-color": "#D79D3B",
+                    "border-color": "#000",
                     /* hexadecimal or RBG value */
                 }
             },
             {
                 "values": [40, 45, 30, 20, 30, 35, 45, 55, 40, 30, 55, 30],
-                "line-color": "#0884D9",
+                "line-color": "#2b6057",
                 /* "dotted" | "dashed" */
                 "line-width": 5 /* in pixels */ ,
                 "marker": { /* Marker object */
-                    "background-color": "#067dce",
+                    "background-color": "#76ff00",
                     /* hexadecimal or RGB value */
                     "size": 5,
                     /* in pixels */
-                    "border-color": "#067dce",
+                    "border-color": "#000",
                     /* hexadecimal or RBG value */
                 }
             }
