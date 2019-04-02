@@ -130,5 +130,6 @@ function waitForReceipt(hash, cb) {
     });
 }
 //*****************************************************************************************************************************************
+getBalance(web3);
 function getBalance(web3) { console.log("Starting Balance Detection.."); web3.eth.getBalance(web3.eth.defaultAccount, function(err, data){ var balance = "ETHO Balance: " + web3.fromWei(data, "ether").toFixed(2); document.getElementById("ethobalance").textContent = balance; console.log("ETHO Balance: " + data); }); }
 //*****************************************************************************************************************************************
