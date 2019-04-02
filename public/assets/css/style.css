@@ -484,7 +484,7 @@ dd {
   top: 0;
   left: 0;
   z-index: 999;
-  background-color: #201f2b; }
+  background-color: #840032; }
   #preloader:after, #preloader:before {
     content: " ";
     position: absolute;
@@ -493,7 +493,7 @@ dd {
     width: 60px;
     height: 60px;
     margin: -30px 0 0 -30px;
-    border: 1px solid #d94343;
+    border: 1px solid #000;
     border-radius: 50%;
     -webkit-transform: translate3d(0, 0, 0) scale(0);
     transform: translate3d(0, 0, 0) scale(0);
