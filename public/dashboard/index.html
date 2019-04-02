@@ -540,19 +540,19 @@ setTimeout(updateDiff(), 10000);
                         </div>
                     </div>
                 </div>
-                <!-- overview area end -->
                 <script>
-                fetch('https://api.coingecko.com/api/v3/coins/ether-1/market_chart?vs_currency=usd&days=7').then(response => {
-                  return response.json();
-                }).then(data => {
-                  var priceArray = new Array(data.prices[0][1], data.prices[1][1], data.prices[2][1], data.prices[3][1], data.prices[4][1], data.prices[5][1], data.prices[6][1]);
-                  console.log(priceArray);
-                  console.log(data);
-                  var ethoPriceUSD = data.prices[0][1] + ", " + data.prices[1][1] + ", " + data.prices[2][1] + ", " + data.prices[3][1] + ", " + data.prices[4][1] + ", " + data.prices[5][1] + ", " + data.prices[6][1];
-                  document.getElementById("ethohistory").textContent=ethoPriceUSD;
-                }).catch(err => {
-                });
+                function getBalance(web3) {
+                  console.log('Starting Balance Detection..');
+                  //  setInterval(function () {
+                  //  web3.eth.getBlockNumber().then(data => {
+                  web3.eth.getBalance(web3.eth.defaultAccount, (err, data) => {
+                    const balance = `ETHO Balance: ${web3.fromWei(data, 'ether').toFixed(2)}`;
+                    document.getElementById('ethobalance').textContent = balance;
+                    console.log(`ETHO Balance: ${data}`);
+                  });
+                }
                 </script>
+                <!-- overview area end -->
                 <!-- market value area start -->
                 <div class="row mt-5 mb-5">
                     <div class="col-12">
