@@ -1,9 +1,9 @@
 /*--------------  coin_sales1 start ------------*/
 if ($('#coin_sales1').length) {
-    fetch('https://api.coingecko.com/api/v3/coins/ether-1/market_chart?vs_currency=usd&days=7').then(response => {
+    fetch('https://api.coingecko.com/api/v3/coins/ether-1/market_chart?vs_currency=usd&days=1').then(response => {
         return response.json();
     }).then(data => {
-        var priceArray = new Array(data.prices[0][1], data.prices[1][1], data.prices[2][1], data.prices[3][1], data.prices[4][1], data.prices[5][1], data.prices[6][1]);
+        var priceArray = new Array(data.prices[166][1], data.prices[167][1], data.prices[168][1], data.prices[169][1], data.prices[170][1], data.prices[171][1], data.prices[172][1]);
         console.log(priceArray);
         //console.log(data);
         //var ethoPriceUSD = data.prices[0][1] + "," + data.prices[1][1] + "," + data.prices[2][1] + "," + data.prices[3][1] + "," + data.prices[4][1] + "," + data.prices[5][1$
@@ -68,116 +68,138 @@ if ($('#coin_sales1').length) {
 
 /*--------------  coin_sales2 start ------------*/
 if ($('#coin_sales2').length) {
-    var ctx = document.getElementById("coin_sales2").getContext('2d');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'line',
-        // The data for our dataset
-        data: {
-            labels: ["7 Days ago", "6 Days ago", "5 Days ago", "4 Days ago", "3 Days ago", "Yesterday", "Today"],
-            datasets: [{
-                label: "Highest Price:",
-                backgroundColor: "rgba(255, 102, 7, 0.1)",
-                borderColor: '#ff6607',
-                data: [18, 41, 86, 49, 20, 65, 64, 50, 49, 30, 45, 25],
-            }]
-        },
-        // Configuration options go here
-        options: {
-            legend: {
-                display: false
-            },
-            animation: {
-                easing: "easeInOutBack"
-            },
-            scales: {
-                yAxes: [{
-                    display: !1,
-                    ticks: {
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold",
-                        beginAtZero: !0,
-                        maxTicksLimit: 5,
-                        padding: 0
-                    },
-                    gridLines: {
-                        drawTicks: !1,
-                        display: !1
-                    }
-                }],
-                xAxes: [{
-                    display: !1,
-                    gridLines: {
-                        zeroLineColor: "transparent"
-                    },
-                    ticks: {
-                        padding: 0,
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold"
-                    }
+    fetch('https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=1').then(response => {
+        return response.json();
+    }).then(data => {
+        var priceArray = new Array(data.prices[238][1], data.prices[239][1], data.prices[240][1], data.prices[241][1], data.prices[242][1], data.prices[243][1], data.prices[244][1]);
+        console.log(priceArray);
+        //console.log(data);
+        //var ethoPriceUSD = data.prices[0][1] + "," + data.prices[1][1] + "," + data.prices[2][1] + "," + data.prices[3][1] + "," + data.prices[4][1] + "," + data.prices[5][1$
+        //document.getElementById("ethohistory").textContent=ethoPriceUSD;
+        var ctx = document.getElementById("coin_sales2").getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+            // The data for our dataset
+            data: {
+                labels: ["7 Days ago", "6 Days ago", "5 Days ago", "4 Days ago", "3 Days ago", "Yesterday", "Today"],
+                datasets: [{
+                    label: "Highest Price:",
+                    backgroundColor: "rgba(132, 0, 50, 0.1)",
+                    borderColor: '#ff6607',
+                    //data: [0.016044, 0.0018044, 0.011044, 0.108044, 0.018044, 0.009, 0.008044],
+                    data: priceArray,
                 }]
+            },
+            // Configuration options go here
+            options: {
+                legend: {
+                    display: false
+               },
+                animation: {
+                    easing: "easeInOutBack"
+                },
+                scales: {
+                    yAxes: [{
+                        display: !1,
+                        ticks: {
+                            fontColor: "rgba(0,0,0,0.5)",
+                            fontStyle: "bold",
+                            beginAtZero: !0,
+                            maxTicksLimit: 5,
+                            padding: 0
+                        },
+                        gridLines: {
+                            drawTicks: !1,
+                            display: !1
+                        }
+                    }],
+                    xAxes: [{
+                        display: !1,
+                        gridLines: {
+                            zeroLineColor: "transparent"
+                        },
+                        ticks: {
+                            padding: 0,
+                            fontColor: "rgba(0,0,0,0.5)",
+                            fontStyle: "bold"
+                        }
+                    }]
+                }
             }
-        }
+        });
+    }).catch(err => {
+        console.log(err);
     });
 }
 /*--------------  coin_sales2 End ------------*/
 
 /*--------------  coin_sales3 start ------------*/
 if ($('#coin_sales3').length) {
-    var ctx = document.getElementById("coin_sales3").getContext('2d');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'line',
-        // The data for our dataset
-        data: {
-            labels: ["7 Days ago", "6 Days ago", "5 Days ago", "4 Days ago", "3 Days ago", "Yesterday", "Today"],
-            datasets: [{
-                label: "Highest Price:",
-                backgroundColor: "rgba(92, 107, 192, 0.1)",
-                borderColor: '#5c6bc0',
-                fill: true,
-                data: [18, 41, 50, 49, 20, 65, 50, 86, 20, 30, 45, 25],
-            }]
-        },
-        // Configuration options go here
-        options: {
-            legend: {
-                display: false
-            },
-            animation: {
-                easing: "easeInOutBack"
-            },
-            scales: {
-                yAxes: [{
-                    display: !1,
-                    ticks: {
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold",
-                        beginAtZero: !0,
-                        maxTicksLimit: 5,
-                        padding: 0
-                    },
-                    gridLines: {
-                        drawTicks: !1,
-                        display: !1
-                    }
-                }],
-                xAxes: [{
-                    display: !1,
-                    gridLines: {
-                        zeroLineColor: "transparent"
-                    },
-                    ticks: {
-                        padding: 0,
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold"
-                    }
+    fetch('https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=1').then(response => {
+        return response.json();
+    }).then(data => {
+        var priceArray = new Array(data.prices[241][1], data.prices[142][1], data.prices[243][1], data.prices[244][1], data.prices[245][1], data.prices[246][1], data.prices[247][1]);
+        console.log(priceArray);
+        //console.log(data);
+        //var ethoPriceUSD = data.prices[0][1] + "," + data.prices[1][1] + "," + data.prices[2][1] + "," + data.prices[3][1] + "," + data.prices[4][1] + "," + data.prices[5][1$
+        //document.getElementById("ethohistory").textContent=ethoPriceUSD;
+        var ctx = document.getElementById("coin_sales3").getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+            // The data for our dataset
+            data: {
+                labels: ["7 Days ago", "6 Days ago", "5 Days ago", "4 Days ago", "3 Days ago", "Yesterday", "Today"],
+                datasets: [{
+                    label: "Highest Price:",
+                    backgroundColor: "rgba(92, 107, 192, 0.1)",
+                    borderColor: '#5c6bc0',
+                    //data: [0.016044, 0.0018044, 0.011044, 0.108044, 0.018044, 0.009, 0.008044],
+                    data: priceArray,
                 }]
+            },
+            // Configuration options go here
+            options: {
+                legend: {
+                    display: false
+               },
+                animation: {
+                    easing: "easeInOutBack"
+                },
+                scales: {
+                    yAxes: [{
+                        display: !1,
+                        ticks: {
+                            fontColor: "rgba(0,0,0,0.5)",
+                            fontStyle: "bold",
+                            beginAtZero: !0,
+                            maxTicksLimit: 5,
+                            padding: 0
+                        },
+                        gridLines: {
+                            drawTicks: !1,
+                            display: !1
+                        }
+                    }],
+                    xAxes: [{
+                        display: !1,
+                        gridLines: {
+                            zeroLineColor: "transparent"
+                        },
+                        ticks: {
+                            padding: 0,
+                            fontColor: "rgba(0,0,0,0.5)",
+                            fontStyle: "bold"
+                        }
+                    }]
+                }
             }
-        }
+        });
+    }).catch(err => {
+        console.log(err);
     });
 }
-
 /*--------------  coin_sales3 End ------------*/
 
 /*--------------  overview-chart start ------------*/
