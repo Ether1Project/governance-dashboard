@@ -23,6 +23,15 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- modernizr css -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
+    <script type="text/javascript">                  function getBalance(web3) {
+                      console.log('Starting Balance Detection..');
+                      web3.eth.getBalance(web3.eth.defaultAccount, (err, data) => {
+                        const balance = `ETHO Balance: ${web3.fromWei(data, 'ether').toFixed(2)}`;
+                        document.getElementById('ethobalance').textContent = balance;
+                        console.log(`ETHO Balance: ${data}`);
+                      });
+                    }</script>
 </head>
 
 <body>
@@ -540,18 +549,6 @@ setTimeout(updateDiff(), 10000);
                         </div>
                     </div>
                 </div>
-                <script>
-                function getBalance(web3) {
-                  console.log('Starting Balance Detection..');
-                  //  setInterval(function () {
-                  //  web3.eth.getBlockNumber().then(data => {
-                  web3.eth.getBalance(web3.eth.defaultAccount, (err, data) => {
-                    const balance = `ETHO Balance: ${web3.fromWei(data, 'ether').toFixed(2)}`;
-                    document.getElementById('ethobalance').textContent = balance;
-                    console.log(`ETHO Balance: ${data}`);
-                  });
-                }
-                </script>
                 <!-- overview area end -->
                 <!-- market value area start -->
                 <div class="row mt-5 mb-5">
