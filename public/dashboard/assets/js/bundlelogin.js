@@ -14,7 +14,7 @@ if (typeof web3 !== 'undefined')
       }
       else if (accounts.length == 0){
            console.log("User is not logged in");
-           var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>Please Install or Login to Metamask/The Ether-1 Browser Extension to Continue</small></p></form>';
+           var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>No account</small></p></form>';
            document.getElementById("ethoFSLogin").innerHTML = formText;
       }
       else{
@@ -34,12 +34,12 @@ if (typeof web3 !== 'undefined')
                        if(result)
                        {
                            console.log("User Account Found: " + web3.eth.defaultAccount);
-                           var formText = '<p>Welcome Back ' + result + '</p><p>User Address: ' + GlobalUserAddress + '</p>';
+                           var formText = result ;
                            document.getElementById("ethoFSLogin").innerHTML = formText;
                        }
                        }else{
                            console.log("Error getting user account name");
-                           var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>Please Install or Login to Metamask/The Ether-1 Browser Extension to Continue</small></p></form>';
+                           var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>No account</small></p></form>';
                            document.getElementById("ethoFSLogin").innerHTML = formText;
                        }
                    });
@@ -54,7 +54,7 @@ if (typeof web3 !== 'undefined')
            else
            {
                console.log("Access To Browser Extension Not Found");
-               var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>Please Install or Login to Metamask/The Ether-1 Browser Extension to Continue</small></p></form>';
+               var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>No account</small></p></form>';
                document.getElementById("ethoFSLogin").innerHTML = formText;
            }
        });
@@ -64,7 +64,7 @@ if (typeof web3 !== 'undefined')
 else
 {
     console.log("Access To Browser Extension Not Found");
-    var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>Please Install or Login to Metamask/The Ether-1 Browser Extension to Continue</small></p></form>';
+    var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>No account</small></p></form>';
     document.getElementById("ethoFSLogin").innerHTML = formText;
 }
 })

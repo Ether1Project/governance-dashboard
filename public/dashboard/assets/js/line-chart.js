@@ -6,12 +6,12 @@ if ($('#coin_sales1').length) {
         type: 'line',
         // The data for our dataset
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July", "January", "February", "March", "April", "May"],
+            labels: ["7 Days ago", "6 Days ago", "5 Days ago", "4 Days ago", "3 Days ago", "Yesterday", "Today"],
             datasets: [{
-                label: "Sales",
+                label: "Highest Price:",
                 backgroundColor: "rgba(132, 0, 50, 0.1)",
                 borderColor: '#840032',
-                data: [18, 41, 86, 49, 20, 35, 20, 50, 49, 30, 45, 25],
+                data: [0.016044, 0.0018044, 0.011044, 0.108044, 0.018044, 0.009, 0.008044],
             }]
         },
         // Configuration options go here
@@ -62,9 +62,9 @@ if ($('#coin_sales2').length) {
         type: 'line',
         // The data for our dataset
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July", "January", "February", "March", "April", "May"],
+            labels: ["7 Days ago", "6 Days ago", "5 Days ago", "4 Days ago", "3 Days ago", "Yesterday", "Today"],
             datasets: [{
-                label: "Sales",
+                label: "Highest Price:",
                 backgroundColor: "rgba(255, 102, 7, 0.1)",
                 borderColor: '#ff6607',
                 data: [18, 41, 86, 49, 20, 65, 64, 50, 49, 30, 45, 25],
@@ -118,9 +118,9 @@ if ($('#coin_sales3').length) {
         type: 'line',
         // The data for our dataset
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July", "January", "February", "March", "April", "May"],
+            labels: ["7 Days ago", "6 Days ago", "5 Days ago", "4 Days ago", "3 Days ago", "Yesterday", "Today"],
             datasets: [{
-                label: "Sales",
+                label: "Highest Price:",
                 backgroundColor: "rgba(92, 107, 192, 0.1)",
                 borderColor: '#5c6bc0',
                 fill: true,
