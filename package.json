@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "bundlelogin": "browserify public/assets/js/login.js > public/assets/js/bundlelogin.js",
+    "bundlelogin": "browserify public/dashboard/assets/js/login.js > public/dashboard/assets/js/bundlelogin.js",
     "start": "http-server -c-1 -p 12345 public",
     "dev": "npm run bundle && npm run start"
   },
