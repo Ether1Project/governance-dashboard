@@ -1,9 +1,9 @@
 /*--------------  coin_sales1 start ------------*/
 if ($('#coin_sales1').length) {
-    fetch('https://api.coingecko.com/api/v3/coins/ether-1/market_chart?vs_currency=usd&days=1').then(response => {
+    fetch('https://api.coingecko.com/api/v3/coins/ether-1/market_chart?vs_currency=usd&days=7').then(response => {
         return response.json();
     }).then(data => {
-        var priceArray = new Array(data.prices[166][1], data.prices[167][1], data.prices[168][1], data.prices[169][1], data.prices[170][1], data.prices[171][1], data.prices[172][1]);
+        var priceArray = new Array(data.prices[143][1], data.prices[144][1], data.prices[145][1], data.prices[146][1], data.prices[147][1], data.prices[128][1], data.prices[149][1]);
         console.log(priceArray);
         //console.log(data);
         //var ethoPriceUSD = data.prices[0][1] + "," + data.prices[1][1] + "," + data.prices[2][1] + "," + data.prices[3][1] + "," + data.prices[4][1] + "," + data.prices[5][1$
@@ -68,10 +68,10 @@ if ($('#coin_sales1').length) {
 
 /*--------------  coin_sales2 start ------------*/
 if ($('#coin_sales2').length) {
-    fetch('https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=1').then(response => {
+    fetch('https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=7').then(response => {
         return response.json();
     }).then(data => {
-        var priceArray = new Array(data.prices[238][1], data.prices[239][1], data.prices[240][1], data.prices[241][1], data.prices[242][1], data.prices[243][1], data.prices[244][1]);
+        var priceArray = new Array(data.prices[145][1], data.prices[146][1], data.prices[147][1], data.prices[148][1], data.prices[149][1], data.prices[150][1], data.prices[151][1]);
         console.log(priceArray);
         //console.log(data);
         //var ethoPriceUSD = data.prices[0][1] + "," + data.prices[1][1] + "," + data.prices[2][1] + "," + data.prices[3][1] + "," + data.prices[4][1] + "," + data.prices[5][1$
@@ -136,10 +136,10 @@ if ($('#coin_sales2').length) {
 
 /*--------------  coin_sales3 start ------------*/
 if ($('#coin_sales3').length) {
-    fetch('https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=1').then(response => {
+    fetch('https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=7').then(response => {
         return response.json();
     }).then(data => {
-        var priceArray = new Array(data.prices[241][1], data.prices[142][1], data.prices[243][1], data.prices[244][1], data.prices[245][1], data.prices[246][1], data.prices[247][1]);
+        var priceArray = new Array(data.prices[145][1], data.prices[146][1], data.prices[147][1], data.prices[148][1], data.prices[149][1], data.prices[150][1], data.prices[151][1]);
         console.log(priceArray);
         //console.log(data);
         //var ethoPriceUSD = data.prices[0][1] + "," + data.prices[1][1] + "," + data.prices[2][1] + "," + data.prices[3][1] + "," + data.prices[4][1] + "," + data.prices[5][1$
