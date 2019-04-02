@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>srtdash - ICO Dashboard</title>
+    <title>Ether-1 - Governance Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -343,7 +343,7 @@
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right">
                             <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
-                            <h4 id="ethoFSLogin" class="user-name dropdown-toggle" data-toggle="dropdown"></h4>
+                            <h4 id="ethoFSLogin2" class="user-name dropdown-toggle" data-toggle="dropdown"></h4>
                         </div>
                     </div>
                 </div>
@@ -516,9 +516,24 @@ setTimeout(updateDiff(), 10000);
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h4 class="header-title mb-0">Overview of your ETHO Backing</h4>
-                                    <select class="custome-select border-0 pr-3">
-                                        <option selected>Last 24 Hours</option>
-                                    </select>
+                                    <button type="button" class="btn btn-primary btn-flat btn-lg" data-toggle="modal" data-target=".bd-example-modal-sm">ETHO Balance
+                                    </button>
+                                    <div class="modal fade bd-example-modal-sm">
+                                        <div class="modal-dialog modal-sm">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" style="color: #840032"> Current ETHO Balance</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" style="color: black"><span>&times;</span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p id="ethoFSLogin3" style="font-size: 13px"> </p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="verview-shart"></div>
                             </div>
@@ -1007,6 +1022,7 @@ setTimeout(updateDiff(), 10000);
     <script src="../assets/js/config.js"></script>
     <script src="../assets/js/concat.js"></script>
     <script src="assets/js/bundlelogin.js"></script>
+    <script src="assets/js/bundlelogin2.js"></script>
 </body>
 
 </html>
