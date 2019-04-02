@@ -906,7 +906,7 @@ body {
 .layer {
   width: 100%;
   height: 100%;
-  background-image: url("../../assets/images/ethofsbackground.png");
+  background-color: black;
   background-size: cover;
   background-position: center; }
 
