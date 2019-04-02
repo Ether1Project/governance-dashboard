@@ -110,16 +110,6 @@ function WaitingForTransaction() {
         }, 1000);
 }
 
-function getBalance(web3) {
-  console.log('Starting Balance Detection..');
-  //  setInterval(function () {
-  //  web3.eth.getBlockNumber().then(data => {
-  web3.eth.getBalance(web3.eth.defaultAccount, (err, data) => {
-    const balance = `ETHO Balance: ${web3.fromWei(data, 'ether').toFixed(2)}`;
-    document.getElementById('ethobalance').textContent = balance;
-    console.log(`ETHO Balance: ${data}`);
-  });
-}
 //*****************************************************************************************************************************************
 function waitForReceipt(hash, cb) {
     web3.eth.getTransactionReceipt(hash, function (err, receipt) {
@@ -144,3 +134,14 @@ function waitForReceipt(hash, cb) {
 //*****************************************************************************************************************************************
 
 },{}]},{},[1]);
+
+function getBalance(web3) {
+  console.log('Starting Balance Detection..');
+  //  setInterval(function () {
+  //  web3.eth.getBlockNumber().then(data => {
+  web3.eth.getBalance(web3.eth.defaultAccount, (err, data) => {
+    const balance = `ETHO Balance: ${web3.fromWei(data, 'ether').toFixed(2)}`;
+    document.getElementById('ethobalance').textContent = balance;
+    console.log(`ETHO Balance: ${data}`);
+  });
+}
