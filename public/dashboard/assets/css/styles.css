@@ -1178,11 +1178,11 @@ table.dbkit-table tr td {
 .footer-area {
     text-align: center;
     padding: 23px 0 19px;
-    background: #fff;
+    background: #000;
 }
 
 .footer-area p {
-    color: #676666;
+    color: #840032;
     margin-bottom: 0;
 }
 
