@@ -160,112 +160,7 @@
                     </div>
                 </div>
             </div>
-            <!-- page title area end -->
-            <!--JS for ETHO price-->
-            <script>
-            function updatePriceData()
-            {
-                $.getJSON('https://www.coincalculators.io/api.aspx?name=ether1&hashrate=38000000&power=175&poolfee=0&powercost=0.1', function(data) {
-                    var text = `${data.price_usd}`
-                    var text= "$" + Math.round(data.price_usd*100000)/100000 + " USD"
-
-                    $(".price").html(text);
-
-                    setTimeout(updatePriceData(), 100000);
-                });
-            }
-
-            setTimeout(updatePriceData(), 100000);
-        </script>
-        <!--END of JS for the price-->
-        <!--JS for BTC price-->
-        <script>
-        function updatePriceData()
-        {
-            $.getJSON('https://www.coincalculators.io/api.aspx?name=bitcoin&hashrate=76000000000000&power=4000&poolfee=0&powercost=0.1', function(data) {
-                var text = `${data.price_usd}`
-                var text= "$" + Math.round(data.price_usd) + " USD"
-
-                $(".price2").html(text);
-
-                setTimeout(updatePriceData(), 100000);
-            });
-        }
-
-        setTimeout(updatePriceData(), 100000);
-    </script>
-    <!--END of JS for the price-->
-    <!--JS for ETH price-->
-    <script>
-    function updatePriceData()
-    {
-        $.getJSON('https://www.coincalculators.io/api.aspx?name=ethereum&hashrate=76000000000000&power=4000&poolfee=0&powercost=0.1', function(data) {
-            var text = `${data.price_usd}`
-            var text= "$" + Math.round(data.price_usd) + " USD"
-
-            $(".price3").html(text);
-
-          setTimeout(updatePriceData(), 100000);
-        });
-    }
-
-    setTimeout(updatePriceData(), 100000);
-</script>
-<!--END of JS for the price-->
-<!--JS for the %-->
-<script>
-function updateDiff()
-{
-      $.getJSON('https://api.coingecko.com/api/v3/coins/ether-1?tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true', function(data) {
-
-          var text = `${data.market_data.price_change_percentage_24h}`
-          var text=Math.round(data.market_data.price_change_percentage_24h*100)/100 + "%"
-
-$(".etho").html(text);
-setTimeout(updateDiff(), 10000);
-
-      });
-    }
-
-    setTimeout(updateDiff(), 10000);
-      </script>
-      <!--END of JS for the %-->
-      <!--JS for the %-->
-      <script>
-      function updateDiff()
-      {
-            $.getJSON('https://api.coingecko.com/api/v3/coins/bitcoin?tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true', function(data) {
-
-                var text = `${data.market_data.price_change_percentage_24h}`
-                var text=Math.round(data.market_data.price_change_percentage_24h*100)/100 + "%"
-
-      $(".btc").html(text);
-      setTimeout(updateDiff(), 10000);
-
-            });
-          }
-
-          setTimeout(updateDiff(), 10000);
-            </script>
-            <!--END of JS for the %-->
-            <!--JS for the %-->
-            <script>
-            function updateDiff()
-            {
-                  $.getJSON('https://api.coingecko.com/api/v3/coins/ethereum?tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true', function(data) {
-
-                      var text = `${data.market_data.price_change_percentage_24h}`
-                      var text=Math.round(data.market_data.price_change_percentage_24h*100)/100 + "%"
-
-            $(".eth").html(text);
-            setTimeout(updateDiff(), 10000);
-
-                  });
-                }
-
-                setTimeout(updateDiff(), 10000);
-                  </script>
-                  <!--END of JS for the %-->
+<!--Removed JS from here-->
             <div class="main-content-inner">
                 <!-- sales report area start -->
                 <div class="sales-report-area mt-5 mb-5">
@@ -607,6 +502,7 @@ setTimeout(updateDiff(), 10000);
     <script src="../assets/js/config.js"></script>
     <script src="../assets/js/concat.js"></script>
     <script src="assets/js/bundledashboardlogin.js"></script>
+    <script src="assets/js/market.js"></script>
 </body>
 
 </html>
