@@ -33,7 +33,7 @@ if (typeof web3 !== 'undefined')
                        if(result)
                        {
                            console.log("User Account Found: " + web3.eth.defaultAccount);
-                           var formText = '<p>Welcome Back ' + result + '</p><p>User Address: ' + GlobalUserAddress + '</p>';
+                           var formText = '<p>Welcome Back ' + result + '</p><p>User Address: ' + GlobalUserAddress + '</p><a href="dashboard/index.html"><button type="enter" id="enter-button" class="btn btn-primary-enter">Enter</button></a><br><p class="m-b-0 fade-color-3"><small>User Address Found - Click Enter To Proceed</small></p>';
                            document.getElementById("ethoFSLogin").innerHTML = formText;
                        }
                        }else{

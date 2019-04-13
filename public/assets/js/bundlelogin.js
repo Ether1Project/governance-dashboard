@@ -34,7 +34,7 @@ if (typeof web3 !== 'undefined')
                        if(result)
                        {
                            console.log("User Account Found: " + web3.eth.defaultAccount);
-                           var formText = '<p>Welcome Back ' + result + '</p><p>User Address: ' + GlobalUserAddress + '</p>';
+                           var formText = '<p>Welcome Back ' + result + '</p><p>User Address: ' + GlobalUserAddress + '</p><a href="dashboard/index.html"><button type="enter" id="enter-button" class="btn btn-primary-enter">Enter</button></a><br><p class="m-b-0 fade-color-3"><small>User Address Found - Click Enter To Proceed</small></p>';
                            document.getElementById("ethoFSLogin").innerHTML = formText;
                        }
                        }else{
@@ -130,6 +130,9 @@ function waitForReceipt(hash, cb) {
         }
     });
 }
+//*****************************************************************************************************************************************
+getBalance(web3);
+function getBalance(web3) { console.log("Starting Balance Detection.."); web3.eth.getBalance(web3.eth.defaultAccount, function(err, data){ var balance = "ETHO Balance: " + web3.fromWei(data, "ether").toFixed(2); document.getElementById("ethobalance").textContent = balance; console.log("ETHO Balance: " + data); }); }
 //*****************************************************************************************************************************************
 
 },{}]},{},[1]);

@@ -14,8 +14,8 @@ if (typeof web3 !== 'undefined')
       }
       else if (accounts.length == 0){
            console.log("User is not logged in");
-           var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>No account</small></p></form>';
-           document.getElementById("ethoFSLogin2").innerHTML = formText;
+           var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>Please Install or Login to Metamask/The Ether-1 Browser Extension to Continue</small></p></form>';
+           document.getElementById("ethoFSLogin").innerHTML = formText;
       }
       else{
            console.log("User is logged in");
@@ -34,13 +34,13 @@ if (typeof web3 !== 'undefined')
                        if(result)
                        {
                            console.log("User Account Found: " + web3.eth.defaultAccount);
-                           var formText = result ;
+                           var formText =  result ;
                            document.getElementById("ethoFSLogin2").innerHTML = formText;
                        }
                        }else{
                            console.log("Error getting user account name");
-                           var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>No account</small></p></form>';
-                           document.getElementById("ethoFSLogin2").innerHTML = formText;
+                           var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>Please Install or Login to Metamask/The Ether-1 Browser Extension to Continue</small></p></form>';
+                           document.getElementById("ethoFSLogin").innerHTML = formText;
                        }
                    });
 
@@ -48,14 +48,14 @@ if (typeof web3 !== 'undefined')
                {
                    console.log("User Account Not Found: " + web3.eth.defaultAccount);
                    var formText = '<form id="signup-form"><div class="form-group group-inline"><label for="etho-address" class="form-label">Enter New ethoFS User Name</label><br><input id="etho-address" class="form-control form-primary form-animated" name="etho-address" required="" placeholder=""><button type="button" class="btn btn-primary" onclick="window.AddNewUser();">Signup</button></div><p class="m-b-0 fade-color-3"><small><span id="wait">Click Signup to Register Your Metamask/Ether-1 Browser Extension Address With ethoFS To Continue</span></small></p></form>';
-                   document.getElementById("ethoFSLogin2").innerHTML = formText;
+                   document.getElementById("ethoFSLogin").innerHTML = formText;
                }
            }
            else
            {
                console.log("Access To Browser Extension Not Found");
-               var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>No account</small></p></form>';
-               document.getElementById("ethoFSLogin2").innerHTML = formText;
+               var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>Please Install or Login to Metamask/The Ether-1 Browser Extension to Continue</small></p></form>';
+               document.getElementById("ethoFSLogin").innerHTML = formText;
            }
        });
 }
@@ -64,8 +64,8 @@ if (typeof web3 !== 'undefined')
 else
 {
     console.log("Access To Browser Extension Not Found");
-    var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>No account</small></p></form>';
-    document.getElementById("ethoFSLogin2").innerHTML = formText;
+    var formText = '<form id="subscribe-form"><div class="form-group group-inline"></div><p class="m-b-0 fade-color-3"><small>Please Install or Login to Metamask/The Ether-1 Browser Extension to Continue</small></p></form>';
+    document.getElementById("ethoFSLogin").innerHTML = formText;
 }
 })
 
@@ -85,7 +85,7 @@ window.AddNewUser = function(){
                     console.log("Transaction Has Been Mined: " + receipt);
                     console.log("User Account Found: " + web3.eth.defaultAccount);
                     var formText = '<a href="dashboard/index.html"><button type="enter" id="enter-button" class="btn btn-primary-enter">Enter</button></a><br><p class="m-b-0 fade-color-3"><small>User Address Found - Click Enter To Proceed</small></p>';
-                    document.getElementById("ethoFSLogin2").innerHTML = formText;
+                    document.getElementById("ethoFSLogin").innerHTML = formText;
                 });
             }else{
                 console.log("There was a problem adding new user");
@@ -130,6 +130,9 @@ function waitForReceipt(hash, cb) {
         }
     });
 }
+//*****************************************************************************************************************************************
+getBalance(web3);
+function getBalance(web3) { console.log("Starting Balance Detection.."); web3.eth.getBalance(web3.eth.defaultAccount, function(err, data){ var balance = "ETHO Balance: " + web3.fromWei(data, "ether").toFixed(2); document.getElementById("ethobalance").textContent = balance; console.log("ETHO Balance: " + data); }); }
 //*****************************************************************************************************************************************
 
 },{}]},{},[1]);
